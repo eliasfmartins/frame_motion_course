@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [show, setShow] = useState<boolean>(false);
+  const [showCard, setShowCard] = useState<boolean>(false);
   return (
     <main>
       <motion.h1
@@ -65,6 +66,36 @@ export default function Home() {
             dragElastic
           ></motion.div>
         </div>
+      </div>
+      <div className="flex items-center justify-center h-[30vh] bg-green-400">
+        <motion.div
+          className="bg-slate-400 p-12 rounded-xl "
+          whileHover={{
+            scale: 1.1,
+          }}
+          transition={{
+            layout: {
+              duration: 2,
+              type: "spring",
+            },
+          }}
+          layout
+          onClick={() => setShowCard((e) => !e)}
+        >
+          <motion.h3>Hover or Click</motion.h3>
+          {showCard && (
+            <motion.p
+              className="w-[600px]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem
+              in voluptatibus, sint atque numquam nemo culpa? Autem officiis
+              architecto libero. Delectus eveniet illum obcaecati tempore
+              suscipit tempora quis at.
+            </motion.p>
+          )}
+        </motion.div>
       </div>
     </main>
   );
