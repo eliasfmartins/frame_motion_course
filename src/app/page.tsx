@@ -1,12 +1,25 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   const [show, setShow] = useState<boolean>(false);
   const [showCard, setShowCard] = useState<boolean>(false);
   return (
     <main>
+      <motion.div
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          right: 0,
+          left: 0,
+          background: "purple",
+          height: 10,
+          transformOrigin: "0%",
+        }}
+      ></motion.div>
       <motion.h1
         animate={{ x: [0, 900, 0] }}
         transition={{ duration: 3 }}
@@ -97,6 +110,72 @@ export default function Home() {
           )}
         </motion.div>
       </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolore
+        quaerat, pariatur nulla quasi recusandae impedit incidunt modi veritatis
+        soluta. Illum sequi quam, repellat alias officiis adipisci veniam
+        explicabo autem.
+      </p>
     </main>
   );
 }
